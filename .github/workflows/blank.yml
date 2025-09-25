@@ -1,0 +1,20 @@
+name: myfirstpipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repo
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.1
+        with:
+          depth: 1
+          branch: 'main'
+          owner: 'srinivasarao3234'
+          repository: 'smartail-assignment'
+
+      - name : List All Files 
+        run : ls -R
