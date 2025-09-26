@@ -21,4 +21,4 @@ jobs:
       # Test SSH connection
       - name: Test SSH
         run: |
-          ssh -i ~/.ssh/id_rsa traiflix@ec2-3-109-32-37.ap-south-1.compute.amazonaws.com "echo ✅ Connected to EC2"
+          ssh -i ~/.ssh/id_rsa ubuntu@ec2-3-109-32-37.ap-south-1.compute.amazonaws.com "echo ✅ Connected to EC2"
